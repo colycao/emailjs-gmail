@@ -36,7 +36,6 @@ function init(user, password) {
    async function send(to, body, callback = null, subject = '', from = "") {
      const message = await mailServer.send({
        text: body,
-       from: user,
        from: from ? from : user,
        to,
        subject

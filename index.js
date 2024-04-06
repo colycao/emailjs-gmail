@@ -33,10 +33,11 @@ function init(user, password) {
     * @param {string} [subject=''] Subject of email
     * @async
     */
-   async function send(to, body, callback = null, subject = '') {
+   async function send(to, body, callback = null, subject = '', from = "") {
      const message = await mailServer.send({
        text: body,
        from: user,
+       from: from ? from : user,
        to,
        subject
      }, (err, cbMessage) => {

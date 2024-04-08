@@ -1,5 +1,5 @@
 {
-  "name": "send-gmail",
+  "name": "sendgmailjs",
   "version": "1.0.0",
   "description": "Send mail from a gmail account",
   "main": "index.js",
